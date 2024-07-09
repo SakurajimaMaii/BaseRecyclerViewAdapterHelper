@@ -68,8 +68,8 @@ var secretKeyRingFile = ""//生成的secring.gpg文件目录
 var ossrhUsername = ""//sonatype用户名
 var ossrhPassword = "" //sonatype密码
 
-
-val localProperties: File = project.rootProject.file("local.properties")
+// 参考 https://github.com/CymChad/BaseRecyclerViewAdapterHelper/issues/3791
+val localProperties: File = project.rootProject.file("maven.properties")
 
 if (localProperties.exists()) {
     println("Found secret props file, loading props")
